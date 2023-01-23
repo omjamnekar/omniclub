@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>autoplay-navigaiton</title>
+    <link rel="stylesheet" href="style-3.css" />
+  </head>
+  <body>
+    <!-- image slide start -->
+    <div class="container">
+      <div class="slider">
+        <div class="slides">
+          <!-- radio button start -->
+
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <!-- radio button ends -->
+
+          <!-- image slide end -->
+          <!-- slide image start -->
+
+          <div class="slide first">
+            <img
+              src="photo/gallery/autoplay-navigation/1.jpg"
+              class="nav-img-1"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              src="photo/gallery/autoplay-navigation/2.jpg "
+              class="nav-img-1"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              src="photo/gallery/autoplay-navigation/3.jpg"
+              class="nav-img-1"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              src="photo/gallery/autoplay-navigation/4.jpg"
+              class="nav-img-1"
+            />
+          </div>
+
+          <!-- slide image end -->
+          <!-- automatic navigation start -->
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!-- automatic navigation end -->
+        </div>
+        <!-- manual navigation start -->
+        <div class="navigation-manual">
+          <label class="manual-btn" for="radio1"></label>
+
+          <label class="manual-btn" for="radio2"></label>
+
+          <label class="manual-btn" for="radio3"></label>
+
+          <label class="manual-btn" for="radio4"></label>
+        </div>
+        <!-- manual navigation end -->
+      </div>
+
+      <script type="text/javascript">
+        var counter = 1;
+
+        setInterval(function () {
+          document.getElementById("radio" + counter).checked = true;
+          counter++;
+
+          if (counter > 4) {
+            counter = 1;
+          }
+        }, 4000);
+      </script>
+    </div>
+  </body>
+</html>
